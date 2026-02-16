@@ -3,11 +3,11 @@ const toggler = document.querySelector(".navbar-toggler");
 const menu = document.querySelector("#navbarNav");
 
 menu.addEventListener("show.bs.collapse", () => {
-    toggler.classList.add("open");
+    toggler.classList.add("x");
 });
 
 menu.addEventListener("hide.bs.collapse", () => {
-    toggler.classList.remove("open");
+    toggler.classList.remove("x");
 });
 document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
     link.addEventListener('click', () => {

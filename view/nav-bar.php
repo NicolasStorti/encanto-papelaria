@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light navbar-encanto fixed-top shadow-sm">
+<div class="container">
         <a class="navbar-brand" href="#home" id="h1">
             <img src="../public/img/logo-encanto.png" alt="Encanto Papelaria" class="logo-navbar">
         </a>

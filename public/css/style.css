@@ -1,53 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
-    --bg1: #1f1f1f;
-    --bg2: #373737;
-    --body: #c5c5c5;
-    --color1: #449cdc;
-    --white: #fff;
+    --bg1: #fff8f5;
+    --bg2: #fdecef;
+    --body: #6b5f5f;
+    --color1: #e59aa5;
+    --color2: #c97c87;
+    --white: #ffffff;
 }
+
+/* BASE */
 
 body{
     font-family: 'Ubuntu', sans-serif;
     color: var(--body);
-    line-height: 1.8;
+    line-height: 1.7;
     background-color: var(--bg1);
 }
 
-/* Nav-bar */
-.navbar{
-    padding:1px 0;
-    min-height:auto;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+h1, h2, h3, h4, h5, h6{
+    color: var(--color2);
+    font-weight: 700;
 }
+
+a{
+    color: var(--body);
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+a:hover{
+    color: var(--color1);
+}
+
+/* NAVBAR */
+
+.navbar{
+    padding: 4px 0;
+    min-height: 70px;
+    box-shadow: 0 .3rem .8rem rgba(0,0,0,0.15);
+}
+
+.navbar-encanto{
+    background: var(--bg2);
+}
+
+/* LOGO */
 .logo-navbar{
     height: 80px;
     width: auto;
 }
-.navbar .navbar-nav .nav-link.active{
+
+.navbar-brand{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* LINKS */
+.navbar .navbar-nav .nav-link{
+    position: relative;
+    padding: 10px 16px;
+}
+
+/* HOVER */
+.navbar .navbar-nav .nav-link:hover{
     color: var(--color1);
 }
-.navbar-brand{
-    font-size: 1.8em;
+
+/* LINK ATIVO */
+.navbar .navbar-nav .nav-link.active{
+    color: var(--color2) !important;
 }
-.navbar .container{
-    padding-top:0;
-    padding-bottom:0;
+
+/* LINHA EMBAIXO DO ATIVO */
+.navbar .navbar-nav .nav-link.active::after{
+    content:'';
+    position:absolute;
+    bottom:2px;
+    left:16px;
+    right:16px;
+    height:2px;
+    background:var(--color2);
+    border-radius:2px;
 }
+
+/* BOTÃO MOBILE*/
 
 .navbar-toggler{
     border:none;
     box-shadow:none !important;
 }
 
-.navbar-toggler.open .navbar-toggler-icon{
+/* deixa o ícone preto */
+.navbar-light .navbar-toggler-icon,
+.navbar-encanto .navbar-toggler-icon{
+    filter: brightness(0);
+}
+/* transforma em X */
+
+.navbar-toggler.x .navbar-toggler-icon{
     background-image:none;
     position:relative;
 }
 
-.navbar-toggler.open .navbar-toggler-icon::before,
-.navbar-toggler.open .navbar-toggler-icon::after{
+.navbar-toggler.x .navbar-toggler-icon::before,
+.navbar-toggler.x .navbar-toggler-icon::after{
     content:'';
     position:absolute;
     left:0;
@@ -57,33 +114,10 @@ body{
     top:50%;
 }
 
-.navbar-toggler.open .navbar-toggler-icon::before{
+.navbar-toggler.x .navbar-toggler-icon::before{
     transform:rotate(45deg);
 }
 
-.navbar-toggler.open .navbar-toggler-icon::after{
+.navbar-toggler.x .navbar-toggler-icon::after{
     transform:rotate(-45deg);
-}
-
-h1, h2, h3, h4, h5, h6{
-    color: #fff;
-    font-weight: bolder;
-}
-
-a{
-    color: var(--body);
-    text-decoration: none;
-    transition: all 0.4s ease;
-}
-a:hover{
-    color: var(--color1);
-}
-
-section{
-    padding-top: 160px;
-    padding-bottom: 160px;
-}
-#h1{
-    font-weight: 900;
-    font-weight: bolder;
 }
