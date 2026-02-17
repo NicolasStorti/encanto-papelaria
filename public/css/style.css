@@ -177,3 +177,26 @@ section{
     background-color: var(--color1);
     color: var(--white);
 }
+
+/* FOOTER */
+
+#footers{
+    padding-top: 160px;
+}
+
+#footers .social-icons{
+    display: flex;
+
+}
+#footers .social-icons a{
+    margin-right: 5px;
+    font-size: 16px;
+}
+#footers .footer-top{
+    padding-bottom: 30px;
+}
+#footers .footer-bottom{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid var(--bg2);
+}

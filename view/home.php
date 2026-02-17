@@ -27,5 +27,5 @@
 
 
 
-
+<?php require 'footer.php'; ?>
 <?php require 'end-html.php'; ?>
